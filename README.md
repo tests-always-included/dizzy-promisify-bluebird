@@ -10,8 +10,8 @@ When you use [Dizzy] to perform dependency injection you could also want the thi
 [![codecov.io][codecov-badge]][codecov-link]
 
 
-Overview Things
----------------
+Overview
+--------
 
 First, you will likely want to get Dizzy up and running.
 
