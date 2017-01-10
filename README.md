@@ -1,7 +1,7 @@
 Dizzy-Promisify-Bluebird
 ========================
 
-Brief overview.  Sell the points that are useful.
+When you use [Dizzy] to perform dependency injection you could also want the things to use promises.  For instance, using `fs.readFile()` can get you into a mess with callbacks.  By leveraging [Bluebird], you can make all node-style callback functions return promises.  That call to `fs.readFile()` turns into `fs.readFileAsync()` and you've started a promise chain.
 
 [![npm version][npm-badge]][npm-link]
 [![Build Status][travis-badge]][travis-link]
@@ -13,7 +13,31 @@ Brief overview.  Sell the points that are useful.
 Overview Things
 ---------------
 
-Sample usage and why it's beneficial
+First, you will likely want to get Dizzy up and running.
+
+    var container, Dizzy;
+
+    Dizzy = require('dizzy');
+
+Next, call the plugin and pass in your reference to Dizzy.
+
+    require('dizzy-promisify-bluebird')(Dizzy);
+
+Make your container.
+
+    container = new Dizzy();
+
+Finally, register some modules to be promisified.
+
+    // One module
+    container.register("fsAsync", "fs").fromModule().promisified().cached();
+
+    // Multiple modules
+    container.registerBulk({
+        cryptoAsync: "crypto",
+        globAsync: "glob",
+        zlibAsync: "zlib"
+    }).fromModule().promisified().cached();
 
 
 Installation
@@ -48,12 +72,14 @@ License
 This software is licensed under a [MIT license][LICENSE] that contains an additional non-advertising clause.  [Read full license terms][LICENSE]
 
 
+[Bluebird]: http://bluebirdjs.com/
 [codecov-badge]: https://codecov.io/github/tests-always-included/dizzy-promisify-bluebird/coverage.svg?branch=master
 [codecov-link]: https://codecov.io/github/tests-always-included/dizzy-promisify-bluebird?branch=master
 [dependencies-badge]: https://david-dm.org/tests-always-included/dizzy-promisify-bluebird.png
 [dependencies-link]: https://david-dm.org/tests-always-included/dizzy-promisify-bluebird
 [devdependencies-badge]: https://david-dm.org/tests-always-included/dizzy-promisify-bluebird/dev-status.png
 [devdependencies-link]: https://david-dm.org/tests-always-included/dizzy-promisify-bluebird#info=devDependencies
+[Dizzy]: https://github.com/tests-always-included/dizzy
 [LICENSE]: LICENSE.md
 [npm-badge]: https://badge.fury.io/js/dizzy-promisify-bluebird.svg
 [npm-link]: https://npmjs.org/package/dizzy-promisify-bluebird
