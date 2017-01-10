@@ -75,9 +75,9 @@ This software is licensed under a [MIT license][LICENSE] that contains an additi
 [Bluebird]: http://bluebirdjs.com/
 [codecov-badge]: https://codecov.io/github/tests-always-included/dizzy-promisify-bluebird/coverage.svg?branch=master
 [codecov-link]: https://codecov.io/github/tests-always-included/dizzy-promisify-bluebird?branch=master
-[dependencies-badge]: https://david-dm.org/tests-always-included/dizzy-promisify-bluebird.svg
+[dependencies-badge]: https://img.shields.io/david/tests-always-included/dizzy-promisify-bluebird.svg
 [dependencies-link]: https://david-dm.org/tests-always-included/dizzy-promisify-bluebird
-[devdependencies-badge]: https://david-dm.org/tests-always-included/dizzy-promisify-bluebird/dev-status.svg
+[devdependencies-badge]: https://img.shields.io/david/dev/tests-always-included/dizzy.svg
 [devdependencies-link]: https://david-dm.org/tests-always-included/dizzy-promisify-bluebird#info=devDependencies
 [Dizzy]: https://github.com/tests-always-included/dizzy
 [LICENSE]: LICENSE.md
