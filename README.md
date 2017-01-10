@@ -85,4 +85,3 @@ This software is licensed under a [MIT license][LICENSE] that contains an additi
 [npm-link]: https://npmjs.org/package/dizzy-promisify-bluebird
 [travis-badge]: https://secure.travis-ci.org/tests-always-included/dizzy-promisify-bluebird.png
 [travis-link]: http://travis-ci.org/tests-always-included/dizzy-promisify-bluebird
-
