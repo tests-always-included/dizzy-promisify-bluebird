@@ -73,15 +73,15 @@ This software is licensed under a [MIT license][LICENSE] that contains an additi
 
 
 [Bluebird]: http://bluebirdjs.com/
-[codecov-badge]: https://codecov.io/github/tests-always-included/dizzy-promisify-bluebird/coverage.svg?branch=master
+[codecov-badge]: https://img.shields.io/codecov/c/github/tests-always-included/dizzy-promisify-bluebird/master.svg
 [codecov-link]: https://codecov.io/github/tests-always-included/dizzy-promisify-bluebird?branch=master
 [dependencies-badge]: https://img.shields.io/david/tests-always-included/dizzy-promisify-bluebird.svg
 [dependencies-link]: https://david-dm.org/tests-always-included/dizzy-promisify-bluebird
-[devdependencies-badge]: https://img.shields.io/david/dev/tests-always-included/dizzy.svg
+[devdependencies-badge]: https://img.shields.io/david/dev/tests-always-included/dizzy-promisify-bluebird.svg
 [devdependencies-link]: https://david-dm.org/tests-always-included/dizzy-promisify-bluebird#info=devDependencies
 [Dizzy]: https://github.com/tests-always-included/dizzy
 [LICENSE]: LICENSE.md
-[npm-badge]: https://badge.fury.io/js/dizzy-promisify-bluebird.svg
+[npm-badge]: https://img.shields.io/npm/v/dizzy-promisify-bluebird.svg
 [npm-link]: https://npmjs.org/package/dizzy-promisify-bluebird
-[travis-badge]: https://secure.travis-ci.org/tests-always-included/dizzy-promisify-bluebird.svg
+[travis-badge]: https://img.shields.io/travis/tests-always-included/dizzy-promisify-bluebird/master.svg
 [travis-link]: http://travis-ci.org/tests-always-included/dizzy-promisify-bluebird

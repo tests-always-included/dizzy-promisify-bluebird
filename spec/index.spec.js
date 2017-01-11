@@ -34,12 +34,32 @@ describe("dizzy-promisify-bluebird", () => {
             }
         }
 
+
+        /**
+         * Another fake class, this time for the bulk provider
+         */
+        class MockBulkProvider {
+            /**
+             * Fake method used internally to create functions for
+             * the bulk provider.
+             *
+             * @param {string} methodName
+             */
+            chainMethod(methodName) {
+                var result;
+
+                result = () => {};
+                result.chainTo = methodName;
+            }
+        }
+
         beforeEach(() => {
             var dizzyMock;
 
             spyOn(MockProvider.prototype, "resolve").andCallThrough();
             spyOn(MockProvider.prototype, "resolveAsync").andCallThrough();
             dizzyMock = {
+                BulkProvider: MockBulkProvider,
                 DizzyProvider: MockProvider
             };
             plugin(dizzyMock);
@@ -48,7 +68,11 @@ describe("dizzy-promisify-bluebird", () => {
                 fn: () => {}
             };
         });
-        it("adds .promisified()", () => {
+        it("adds .promisified() to BulkProvider", () => {
+            expect(MockBulkProvider.prototype.promisified).toEqual(jasmine.any(Function));
+            expect(MockBulkProvider.prototype.promisified.chainTo).toEqual("promisified");
+        });
+        it("adds .promisified() to DizzyProvider", () => {
             expect(instance.promisified).toEqual(jasmine.any(Function));
         });
         describe("resolve", () => {
