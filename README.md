@@ -60,12 +60,6 @@ Alternately you may edit your `package.json` and add this to your `dependencies`
     }
 
 
-More Stuff
-----------
-
-Could include project goals, examples, reasoning, API overview, methods, etc.
-
-
 License
 -------
 
