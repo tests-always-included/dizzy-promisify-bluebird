@@ -44,12 +44,15 @@ describe("dizzy-promisify-bluebird", () => {
              * the bulk provider.
              *
              * @param {string} methodName
+             * @return {Function}
              */
             chainMethod(methodName) {
                 var result;
 
                 result = () => {};
                 result.chainTo = methodName;
+
+                return result;
             }
         }
 
