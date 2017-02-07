@@ -113,6 +113,18 @@ describe("dizzy-promisify-bluebird", () => {
                     fn: jasmine.any(Function)
                 });
             });
+            it("promisifies a function with properties", () => {
+                var val;
+
+                instance.value = () => {};
+                instance.value.something = (callback) => {
+                    callback();
+                };
+                instance.promisified(true);
+                val = instance.resolve();
+                expect(val).toEqual(jasmine.any(Function));
+                expect(val.somethingAsync).toEqual(jasmine.any(Function));
+            });
         });
         describe("resolveAsync", () => {
             it("was replaced by a new function", () => {
