@@ -2,6 +2,18 @@ CHANGELOG
 =========
 
 
+1.0.3 - 2017-02-07
+------------------
+
+* If a function is provided instead of an object, that function is switched to be the promisified version. Properties on the function continue to be promisified as they would with a typical object.
+
+
+1.0.2 - 2017-01-11
+------------------
+
+* Added promisification to the bulk provider.
+
+
 1.0.1 - 2017-01-10
 ------------------
 
