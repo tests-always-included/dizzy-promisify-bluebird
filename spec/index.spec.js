@@ -59,8 +59,8 @@ describe("dizzy-promisify-bluebird", () => {
         beforeEach(() => {
             var dizzyMock;
 
-            spyOn(MockProvider.prototype, "resolve").andCallThrough();
-            spyOn(MockProvider.prototype, "resolveAsync").andCallThrough();
+            spyOn(MockProvider.prototype, "resolve").and.callThrough();
+            spyOn(MockProvider.prototype, "resolveAsync").and.callThrough();
             dizzyMock = {
                 BulkProvider: MockBulkProvider,
                 DizzyProvider: MockProvider
@@ -80,7 +80,7 @@ describe("dizzy-promisify-bluebird", () => {
         });
         describe("resolve", () => {
             it("was replaced by a new function", () => {
-                expect(instance.resolve.andCallThrough).not.toBeDefined();
+                expect(instance.resolve.and).not.toBeDefined();
             });
             it("does not add an async method by default", () => {
                 expect(instance.resolve()).toEqual({
@@ -128,7 +128,7 @@ describe("dizzy-promisify-bluebird", () => {
         });
         describe("resolveAsync", () => {
             it("was replaced by a new function", () => {
-                expect(instance.resolveAsync.andCallThrough).not.toBeDefined();
+                expect(instance.resolveAsync.and).not.toBeDefined();
             });
             it("does not add an async method by default", () => {
                 return instance.resolveAsync().then((result) => {
