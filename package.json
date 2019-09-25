@@ -1,6 +1,6 @@
 {
     "name": "dizzy-promisify-bluebird",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Promisify objects supplied with Dizzy.",
     "main": "lib/index.js",
     "scripts": {
