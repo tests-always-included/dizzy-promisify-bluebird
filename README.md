@@ -39,6 +39,15 @@ Finally, register some modules to be promisified.
         zlibAsync: "zlib"
     }).fromModule().promisified().cached();
 
+Want to use TypeScript?
+
+    import { default as Dizzy } from 'dizzy';
+    import { default as dizzyPromisifyBluebird } from 'dizzy-promisify-bluebird';
+
+    dizzyPromisifyBluebird(Dizzy);
+    container = new Dizzy();
+    // and then use your container.
+
 
 Installation
 ------------
