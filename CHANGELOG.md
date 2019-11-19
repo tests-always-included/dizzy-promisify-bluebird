@@ -2,7 +2,14 @@ CHANGELOG
 =========
 
 
-1.1.0 - 2019-11-07
+1.1.1 - 2019-11-19
+------------------
+
+* Added the neglected tests that were skipped with 1.1.0 release.
+* No functional changes.
+
+
+1.1.0 - 2019-11-18
 ------------------
 
 * Switched testing framework.
