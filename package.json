@@ -1,11 +1,11 @@
 {
     "name": "dizzy-promisify-bluebird",
-    "version": "1.0.6",
+    "version": "1.1.0",
     "description": "Promisify objects supplied with Dizzy.",
     "main": "lib/index.js",
     "scripts": {
-        "test": "script/test",
-        "watch": "script/watch"
+        "test": "ava -v",
+        "watch": "ava -w"
     },
     "repository": {
         "type": "git",
@@ -24,17 +24,12 @@
     },
     "homepage": "https://github.com/tests-always-included/dizzy-promisify-bluebird#readme",
     "devDependencies": {
-        "codecov": "~3.6.1",
-        "eslint": "~6.4.0",
-        "istanbul": "~0.4.5",
-        "jasmine": "~3.5.0",
-        "jasmine-test-helpers": "~1.2.3",
-        "nodemon": "~1.19.2"
+        "ava": "~2.4.0"
     },
     "dependencies": {
-        "bluebird": "~3.5.5"
+        "bluebird": "~3.7.1"
     },
     "peerDependencies": {
-        "dizzy": "~2.2.4"
+        "dizzy": "~2.3.0"
     }
 }
