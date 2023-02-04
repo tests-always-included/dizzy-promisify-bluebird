@@ -24,7 +24,7 @@
     },
     "homepage": "https://github.com/tests-always-included/dizzy-promisify-bluebird#readme",
     "devDependencies": {
-        "ava": "~3.15.0"
+        "ava": "~5.1.1"
     },
     "dependencies": {
         "bluebird": "~3.7.2"
